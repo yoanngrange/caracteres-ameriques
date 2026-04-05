@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caractères – Amériques & Afrique</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500;600&family=Urbanist:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --orange:       #C8541A;
+      --orange-hover: #A84213;
+      --ocre:         #B8882A;
+      --sable:        #F5EED8;
+      --sable-mid:    #EAD9B2;
+      --sable-dark:   #C9AD76;
+      --cream:        #FAF7F0;
+      --white:        #FFFFFF;
+      --noir:         #1A1714;
+      --brun:         #5C4530;
+      --gris:         #7A6650;
+      --gris-clair:   #EDE6D8;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: 'Cormorant Garamond', Georgia, serif; background: var(--white); color: var(--noir); overflow-x: hidden; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+    ul { list-style: none; }
+
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 28px; }
+    .section-label { font-family: 'Jost', sans-serif; font-weight: 500; font-size: 0.68rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--orange); }
+    .section-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; line-height: 1.15; color: var(--noir); }
+    .section-title em { font-style: italic; color: var(--orange); }
+    .divider { width: 48px; height: 2px; background: var(--orange); margin: 18px 0 28px; }
+
+    .btn-primary { display: inline-block; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; padding: 14px 32px; background: var(--orange); color: var(--white); transition: background 0.25s; }
+    .btn-primary:hover { background: var(--orange-hover); }
+    .btn-outline { display: inline-block; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; padding: 13px 30px; border: 1.5px solid var(--orange); color: var(--orange); transition: all 0.25s; }
+    .btn-outline:hover { background: var(--orange); color: var(--white); }
+
+    .logo-text { font-family: 'Urbanist', sans-serif; font-weight: 100; font-size: 1.48rem; letter-spacing: -0.01em; color: var(--white); line-height: 1; }
+    .logo-text .logo-dot { color: var(--orange); font-weight: 700; }
+    .logo-sub { font-family: 'Urbanist', sans-serif; font-weight: 400; font-size: 0.56rem; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(255,255,255,0.45); display: block; margin-top: 3px; }
+    .footer-logo-text { font-family: 'Urbanist', sans-serif; font-weight: 800; font-size: 1.4rem; letter-spacing: -0.01em; color: rgba(255,255,255,0.85); line-height: 1; }
+    .footer-logo-text .logo-dot { color: var(--orange); }
+    .footer-logo-sub { font-family: 'Urbanist', sans-serif; font-weight: 400; font-size: 0.54rem; letter-spacing: 0.26em; text-transform: uppercase; color: rgba(255,255,255,0.4); display: block; margin-top: 3px; }
+
+    .loading { text-align: center; padding: 40px 0; font-family: 'Jost', sans-serif; font-size: 0.82rem; color: var(--gris); letter-spacing: 0.1em; }
+    .spinner { display: inline-block; width: 28px; height: 28px; border: 2px solid var(--sable-mid); border-top-color: var(--orange); border-radius: 50%; animation: spin 0.8s linear infinite; margin-bottom: 12px; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── HEADER ── */
+    #header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; background: rgba(22,18,14,0.96); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); transition: padding 0.35s, box-shadow 0.35s; padding: 18px 0; }
+    #header.scrolled { padding: 12px 0; box-shadow: 0 1px 24px rgba(0,0,0,0.25); }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; }
+    .nav-links { display: flex; align-items: center; gap: 34px; }
+    .nav-links a { font-family: 'Jost', sans-serif; font-weight: 400; font-size: 0.8rem; letter-spacing: 0.13em; text-transform: uppercase; color: rgba(255,255,255,0.75); transition: color 0.2s; position: relative; }
+    .nav-links a::after { content: ''; position: absolute; bottom: -3px; left: 0; right: 0; height: 1.5px; background: var(--orange); transform: scaleX(0); transition: transform 0.25s; }
+    .nav-links a:hover::after { transform: scaleX(1); }
+    .nav-links a:hover { color: var(--white) !important; }
+    .nav-contact { font-family: 'Jost', sans-serif; font-weight: 500; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 9px 20px; border: 1.5px solid rgba(200,84,26,0.6); color: var(--orange); transition: all 0.25s; }
+    .nav-contact:hover { background: var(--orange); border-color: var(--orange); color: var(--white) !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; padding: 6px; cursor: pointer; z-index: 1010; }
+    .hamburger span { display: block; width: 24px; height: 1.5px; background: rgba(255,255,255,0.8); }
+    .hamburger.hidden { opacity: 0; pointer-events: none; }
+    .mobile-menu { display: none; position: fixed; inset: 0; background: rgba(22,18,14,0.98); z-index: 1005; flex-direction: column; align-items: center; justify-content: center; gap: 32px; }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a { font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--white); transition: color 0.2s; }
+    .mobile-menu a:hover { color: var(--orange); }
+    .mobile-menu .close-btn { position: absolute; top: 22px; right: 28px; font-size: 2rem; color: rgba(255,255,255,0.6); cursor: pointer; z-index: 1006; }
+
+    /* ── HERO ── */
+    #hero { position: relative; height: 100vh; min-height: 600px; display: flex; align-items: flex-end; overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; background: linear-gradient(160deg, rgba(26,23,20,0.55) 0%, rgba(92,69,48,0.3) 50%, rgba(26,23,20,0.7) 100%), url('https://images.unsplash.com/photo-1516426122078-c23e76319801?w=1800&q=80') center/cover no-repeat; transform: scale(1.04); transition: transform 8s ease-out; }
+    #hero.loaded .hero-bg { transform: scale(1); }
+    .hero-content { position: relative; z-index: 2; padding: 0 0 130px; width: 100%; }
+    .hero-tagline { font-family: 'Jost', sans-serif; font-weight: 300; font-size: 0.72rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--sable-dark); margin-bottom: 18px; }
+    .hero-title { font-family: 'Playfair Display', serif; font-size: clamp(2.8rem, 6vw, 5rem); font-weight: 400; color: var(--white); line-height: 1.1; max-width: 700px; margin-bottom: 24px; }
+    .hero-title em { font-style: italic; color: var(--sable-mid); }
+    .hero-sub { font-size: 1.15rem; font-weight: 300; color: rgba(255,255,255,0.82); max-width: 480px; line-height: 1.7; margin-bottom: 40px; }
+    .hero-cta { display: flex; gap: 16px; flex-wrap: wrap; }
+    .hero-scroll { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; color: rgba(255,255,255,0.6); font-family: 'Jost', sans-serif; font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; animation: bobble 2s ease-in-out infinite; }
+    .hero-scroll::after { content: ''; width: 1px; height: 48px; background: linear-gradient(to bottom, rgba(255,255,255,0.6), transparent); }
+    @keyframes bobble { 0%,100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(6px); } }
+
+    /* ── PHILOSOPHIE ── */
+    #philosophie { background: var(--cream); padding: 100px 0; }
+    .philo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .philo-text .section-label { margin-bottom: 14px; }
+    .philo-body { font-size: 1.1rem; line-height: 1.8; color: var(--brun); margin-top: 18px; }
+    .philo-body p + p { margin-top: 16px; }
+    .philo-pillars { display: grid; grid-template-columns: 1fr; gap: 2px; }
+    .pillar { background: var(--white); padding: 28px 32px; border-left: 3px solid transparent; transition: border-color 0.25s, background 0.25s; }
+    .pillar:hover { border-left-color: var(--orange); background: var(--sable); }
+    .pillar-title { font-family: 'Playfair Display', serif; font-size: 1.18rem; font-weight: 600; margin-bottom: 8px; }
+    .pillar-text { font-size: 0.97rem; color: var(--gris); line-height: 1.65; }
+
+    /* ── VOYAGES ── */
+    #voyages { padding: 100px 0; background: var(--white); }
+    .voyages-header { text-align: center; margin-bottom: 64px; }
+    .voyages-header .divider { margin: 18px auto 28px; }
+    .destination { border-top: 1px solid var(--gris-clair); }
+    .destination:last-child { border-bottom: 1px solid var(--gris-clair); }
+    .destination-toggle { width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 28px 0; cursor: pointer; background: none; font-family: inherit; text-align: left; }
+    .destination-toggle:hover .dest-name { color: var(--orange); }
+    .dest-info { display: flex; align-items: center; gap: 24px; }
+    .dest-num { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--sable-mid); font-style: italic; min-width: 36px; }
+    .dest-name { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 400; transition: color 0.2s; }
+    .dest-count { font-family: 'Jost', sans-serif; font-size: 0.72rem; letter-spacing: 0.14em; color: var(--gris); text-transform: uppercase; }
+    .dest-arrow { width: 32px; height: 32px; border: 1.5px solid var(--gris-clair); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: transform 0.35s, border-color 0.25s, background 0.25s; flex-shrink: 0; }
+    .destination.open .dest-arrow { transform: rotate(45deg); background: var(--orange); border-color: var(--orange); }
+    .dest-arrow svg { width: 14px; height: 14px; }
+    .destination.open .dest-arrow svg path { stroke: var(--white); }
+    .destination-content { display: none; padding: 8px 0 48px; }
+    .destination.open .destination-content { display: block; }
+
+    /* Voyage cards */
+    .voyages-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2px; }
+    .voyage-card { background: var(--cream); cursor: pointer; overflow: hidden; transition: box-shadow 0.3s; }
+    .voyage-card:hover { box-shadow: 0 8px 32px rgba(26,23,20,0.14); }
+    .voyage-card-cover { aspect-ratio: 16/9; overflow: hidden; }
+    .voyage-card-cover img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; display: block; }
+    .voyage-card:hover .voyage-card-cover img { transform: scale(1.05); }
+    .voyage-card-body { padding: 20px 22px 22px; }
+    .voyage-meta { font-family: 'Jost', sans-serif; font-size: 0.66rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--orange); margin-bottom: 6px; }
+    .voyage-card-footer { display: flex; align-items: center; justify-content: space-between; margin-top: 12px; }
+    .voyage-title { font-family: 'Playfair Display', serif; font-size: 1.08rem; font-weight: 500; line-height: 1.3; }
+    .voyage-duree { font-family: 'Jost', sans-serif; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--gris); white-space: nowrap; }
+    .voyage-open-btn { font-family: 'Jost', sans-serif; font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--orange); display: flex; align-items: center; gap: 5px; transition: gap 0.2s; }
+    .voyage-card:hover .voyage-open-btn { gap: 8px; }
+
+    /* ── MODALE VOYAGE ── */
+    .voyage-modal { display: none; position: fixed; inset: 0; z-index: 2000; background: rgba(12,9,6,0.88); overflow-y: auto; }
+    .voyage-modal.open { display: block; }
+    .voyage-modal-inner {
+      max-width: 900px; margin: 48px auto 80px; background: var(--white);
+      position: relative; overflow: hidden;
+    }
+    .voyage-modal-close {
+      position: absolute; top: 16px; right: 18px; z-index: 10;
+      width: 36px; height: 36px; background: rgba(26,23,20,0.6); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--white); font-size: 1.1rem; cursor: pointer; transition: background 0.2s;
+    }
+    .voyage-modal-close:hover { background: var(--orange); }
+
+    /* Galerie dans la modale */
+    .vmodal-gallery { position: relative; aspect-ratio: 16/9; background: var(--noir); overflow: hidden; }
+    .vmodal-gallery-main img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .vmodal-gallery-nav {
+      position: absolute; inset: 0; display: flex; align-items: center; justify-content: space-between;
+      padding: 0 14px; pointer-events: none;
+    }
+    .vmodal-gallery-nav button {
+      pointer-events: all; background: rgba(26,23,20,0.5); color: var(--white);
+      width: 40px; height: 40px; border-radius: 50%; font-size: 1rem; display: flex;
+      align-items: center; justify-content: center; transition: background 0.2s; border: none; cursor: pointer;
+    }
+    .vmodal-gallery-nav button:hover { background: var(--orange); }
+    .vmodal-gallery-counter {
+      position: absolute; bottom: 12px; right: 16px;
+      font-family: 'Jost', sans-serif; font-size: 0.68rem; letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.7); background: rgba(0,0,0,0.4); padding: 4px 10px; border-radius: 2px;
+    }
+    .vmodal-thumbs { display: flex; gap: 3px; padding: 3px 0 0; background: var(--noir); }
+    .vmodal-thumbs .thumb { flex: 1; aspect-ratio: 16/9; max-width: 100px; overflow: hidden; cursor: pointer; opacity: 0.5; transition: opacity 0.2s; }
+    .vmodal-thumbs .thumb.active { opacity: 1; }
+    .vmodal-thumbs .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* Contenu texte de la modale */
+    .vmodal-content { padding: 36px 40px 40px; }
+    .vmodal-header { margin-bottom: 24px; }
+    .vmodal-breadcrumb { font-family: 'Jost', sans-serif; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--orange); margin-bottom: 10px; }
+    .vmodal-title { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 400; line-height: 1.15; margin-bottom: 12px; }
+    .vmodal-meta { display: flex; gap: 24px; flex-wrap: wrap; }
+    .vmodal-meta-item { font-family: 'Jost', sans-serif; font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gris); display: flex; align-items: center; gap: 6px; }
+    .vmodal-meta-item strong { color: var(--brun); }
+    .vmodal-divider { height: 1px; background: var(--gris-clair); margin: 24px 0; }
+    .vmodal-desc { font-size: 1.05rem; line-height: 1.78; color: var(--brun); }
+    .vmodal-contacts { margin-top: 28px; }
+    .vmodal-contacts-label { font-family: 'Jost', sans-serif; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gris); margin-bottom: 12px; }
+    .vmodal-contact-pills { display: flex; flex-wrap: wrap; gap: 10px; }
+    .vmodal-pill { display: flex; align-items: center; gap: 10px; padding: 8px 16px; background: var(--cream); border: 1px solid var(--sable-mid); }
+    .vmodal-pill img { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; }
+    .vmodal-pill-name { font-family: 'Playfair Display', serif; font-size: 0.95rem; }
+    .vmodal-pill-role { font-family: 'Jost', sans-serif; font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--orange); }
+    .vmodal-cta { margin-top: 32px; }
+
+    /* ── SUR MESURE ── */
+    #sur-mesure { background: var(--noir); color: var(--white); padding: 110px 0; position: relative; overflow: hidden; }
+    #sur-mesure::before { content: ''; position: absolute; top: -60px; right: -100px; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(200,84,26,0.12) 0%, transparent 70%); pointer-events: none; }
+    .surm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .surm-text .section-label { color: var(--sable-dark); }
+    .surm-text .section-title { color: var(--white); }
+    .surm-text .divider { background: var(--orange); }
+    .surm-body { font-size: 1.1rem; line-height: 1.8; color: rgba(255,255,255,0.72); margin-bottom: 36px; }
+    .surm-body p + p { margin-top: 14px; }
+    .surm-features { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .surm-feature { display: flex; align-items: flex-start; gap: 14px; }
+    .surm-feature-icon { width: 36px; height: 36px; background: rgba(200,84,26,0.15); border: 1px solid rgba(200,84,26,0.3); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1rem; }
+    .surm-feature-text strong { display: block; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 0.82rem; letter-spacing: 0.06em; color: var(--sable-mid); margin-bottom: 4px; }
+    .surm-feature-text span { font-size: 0.9rem; color: rgba(255,255,255,0.55); line-height: 1.5; }
+    .surm-visual { position: relative; }
+    .surm-img-wrap { position: relative; aspect-ratio: 4/5; overflow: hidden; }
+    .surm-img-wrap img { width: 100%; height: 100%; object-fit: cover; filter: brightness(0.85); }
+    .surm-badge { position: absolute; bottom: -20px; left: -20px; background: var(--orange); padding: 24px 28px; max-width: 200px; }
+    .surm-badge strong { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-style: italic; display: block; line-height: 1; color: var(--white); }
+    .surm-badge span { font-family: 'Jost', sans-serif; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.8); margin-top: 6px; display: block; }
+
+    /* ── ÉQUIPE ── */
+    #equipe { padding: 100px 0; background: var(--cream); }
+    .equipe-header { text-align: center; margin-bottom: 64px; }
+    .equipe-header .divider { margin: 18px auto 28px; }
+    .equipe-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 28px; }
+    .membre-card { background: var(--white); overflow: hidden; }
+    .membre-photo { aspect-ratio: 3/4; overflow: hidden; }
+    .membre-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+    .membre-card:hover .membre-photo img { transform: scale(1.04); }
+    .membre-info { padding: 22px 22px 24px; }
+    .membre-name { font-family: 'Playfair Display', serif; font-size: 1.18rem; font-weight: 500; margin-bottom: 4px; }
+    .membre-role { font-family: 'Jost', sans-serif; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; }
+    .membre-desc { font-size: 0.9rem; line-height: 1.65; color: var(--gris); margin-bottom: 16px; }
+    .membre-contacts { display: flex; flex-direction: column; gap: 6px; }
+    .membre-contact-item { display: flex; align-items: center; gap: 8px; font-family: 'Jost', sans-serif; font-size: 0.78rem; color: var(--brun); }
+
+    /* ── BLOG ── */
+    #blog { padding: 100px 0; background: var(--white); }
+    .blog-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 52px; }
+    .blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .blog-card { cursor: pointer; overflow: hidden; }
+    .blog-img { aspect-ratio: 3/2; overflow: hidden; margin-bottom: 20px; }
+    .blog-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; }
+    .blog-card:hover .blog-img img { transform: scale(1.05); }
+    .blog-date { font-family: 'Jost', sans-serif; font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--orange); margin-bottom: 8px; }
+    .blog-title { font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 500; line-height: 1.35; margin-bottom: 12px; }
+    .blog-excerpt { font-size: 0.92rem; line-height: 1.65; color: var(--gris); }
+    .blog-read-more { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; font-family: 'Jost', sans-serif; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--orange); font-weight: 500; }
+    .blog-read-more svg { transition: transform 0.2s; }
+    .blog-card:hover .blog-read-more svg { transform: translateX(4px); }
+    .blog-modal { display: none; position: fixed; inset: 0; z-index: 2500; background: rgba(26,23,20,0.85); overflow-y: auto; }
+    .blog-modal.open { display: block; }
+    .blog-modal-inner { max-width: 780px; margin: 60px auto; background: var(--white); padding: 52px 56px; position: relative; }
+    .blog-modal-close { position: absolute; top: 20px; right: 20px; font-size: 1.6rem; color: var(--gris); cursor: pointer; }
+    .blog-modal-date { font-family: 'Jost', sans-serif; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--orange); margin-bottom: 14px; }
+    .blog-modal-title { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 400; margin-bottom: 24px; line-height: 1.2; }
+    .blog-modal-body { font-size: 1.05rem; line-height: 1.82; color: var(--brun); }
+    .blog-modal-images { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 28px; }
+    .blog-modal-images img { width: 100%; aspect-ratio: 3/2; object-fit: cover; }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--sable); padding: 100px 0; }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+    .contact-text .section-label { margin-bottom: 14px; }
+    .contact-text .section-title { margin-bottom: 16px; }
+    .contact-body { font-size: 1.05rem; line-height: 1.75; color: var(--brun); margin-bottom: 36px; }
+    .contact-details { display: flex; flex-direction: column; gap: 16px; margin-top: 8px; }
+    .contact-item { display: flex; align-items: flex-start; gap: 14px; }
+    .contact-item-icon { width: 40px; height: 40px; background: var(--orange); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .contact-item-icon svg { color: var(--white); }
+    .contact-item-label { font-family: 'Jost', sans-serif; font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gris); margin-bottom: 2px; }
+    .contact-item-value { font-size: 1rem; color: var(--noir); }
+    .contact-form { display: flex; flex-direction: column; gap: 16px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .form-field { display: flex; flex-direction: column; gap: 6px; }
+    .form-field label { font-family: 'Jost', sans-serif; font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gris); }
+    .form-field input, .form-field select, .form-field textarea { padding: 12px 16px; border: 1px solid var(--sable-mid); background: var(--white); font-family: 'Cormorant Garamond', serif; font-size: 1rem; color: var(--noir); outline: none; transition: border-color 0.2s; }
+    .form-field input:focus, .form-field select:focus, .form-field textarea:focus { border-color: var(--orange); }
+    .form-field textarea { resize: vertical; min-height: 110px; }
+    .form-submit { align-self: flex-start; }
+
+    /* ── FOOTER ── */
+    footer { background: var(--noir); color: rgba(255,255,255,0.55); padding: 52px 0 36px; }
+    .footer-inner { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 52px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 28px; }
+    .footer-tagline { font-size: 0.92rem; line-height: 1.65; color: rgba(255,255,255,0.45); }
+    .footer-col-title { font-family: 'Jost', sans-serif; font-weight: 500; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 18px; }
+    .footer-links { display: flex; flex-direction: column; gap: 10px; }
+    .footer-links a { font-size: 0.9rem; color: rgba(255,255,255,0.5); transition: color 0.2s; }
+    .footer-links a:hover { color: var(--orange); }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; font-family: 'Jost', sans-serif; font-size: 0.72rem; letter-spacing: 0.06em; color: rgba(255,255,255,0.3); }
+    .footer-social a { color: rgba(255,255,255,0.3); font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.2s; }
+    .footer-social a:hover { color: var(--orange); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .nav-links, .nav-contact { display: none; }
+      .hamburger { display: flex; }
+      .philo-grid, .surm-grid, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+      .surm-visual { display: none; }
+      .blog-grid { grid-template-columns: 1fr 1fr; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .blog-modal-inner { padding: 32px 24px; margin: 20px; }
+      .voyage-modal-inner { margin: 0; }
+      .vmodal-content { padding: 24px 20px 32px; }
+    }
+    @media (max-width: 600px) {
+      .blog-grid { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .voyages-grid { grid-template-columns: 1fr; }
+      .surm-features { grid-template-columns: 1fr; }
+      .equipe-grid { grid-template-columns: repeat(2, 1fr); }
+      .vmodal-title { font-size: 1.5rem; }
+      .vmodal-thumbs .thumb { max-width: 60px; }
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+<header id="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <span class="logo-text"><span class="logo-dot">C</span>·aractères</span>
+        <span class="logo-sub">d'Amériques &amp; Afrique</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#philosophie">Notre Approche</a>
+        <a href="#voyages">Voyages</a>
+        <a href="#sur-mesure">Sur Mesure</a>
+        <a href="#equipe">L'Équipe</a>
+        <a href="#blog">Carnet</a>
+        <a href="#contact" class="nav-contact">Nous Contacter</a>
+      </nav>
+      <div class="hamburger" id="hamburger" onclick="openMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <span class="close-btn" onclick="closeMenu()">✕</span>
+  <a href="#philosophie" onclick="closeMenu()">Notre Approche</a>
+  <a href="#voyages" onclick="closeMenu()">Voyages</a>
+  <a href="#sur-mesure" onclick="closeMenu()">Sur Mesure</a>
+  <a href="#equipe" onclick="closeMenu()">L'Équipe</a>
+  <a href="#blog" onclick="closeMenu()">Carnet</a>
+  <a href="#contact" onclick="closeMenu()">Nous Contacter</a>
+</div>
+
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <div class="hero-content">
+      <p class="hero-tagline">Voyages d'exception — Amériques &amp; Afrique</p>
+      <h1 class="hero-title">Des horizons <em>rares</em>,<br>une présence <em>entière</em>.</h1>
+      <p class="hero-sub">Nous concevons des voyages sur mesure pour des petits groupes exigeants — familles, amis proches, équipes — avec une attention totale, avant, pendant et après chaque départ.</p>
+      <div class="hero-cta">
+        <a href="#voyages" class="btn-primary">Découvrir les voyages</a>
+        <a href="#contact" class="btn-outline" style="border-color:rgba(255,255,255,0.6);color:#fff;">Nous écrire</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">Descendre</div>
+</section>
+
+<section id="philosophie">
+  <div class="container">
+    <div class="philo-grid">
+      <div class="philo-text">
+        <p class="section-label">Notre Philosophie</p>
+        <h2 class="section-title">Voyager autrement,<br><em>ensemble</em>.</h2>
+        <div class="divider"></div>
+        <div class="philo-body">
+          <p>Caractères est née d'une conviction simple : les plus beaux voyages ne s'achètent pas sur une brochure. Ils se construisent dans le dialogue, la confiance, et une connaissance intime des terres que l'on vous fait découvrir.</p>
+          <p>Nos équipes voyagent régulièrement sur le terrain — en Amazonie, au Sahel, dans les pampas, au cœur des villes andines. Pas pour en revenir avec des photos, mais pour y tisser des liens humains qui deviendront les fondations de votre voyage.</p>
+          <p>Que vous partiez à 4 en famille ou à 18 pour un séminaire d'entreprise, vous aurez un interlocuteur unique, disponible, et un accès aux meilleurs opérateurs locaux, soigneusement choisis.</p>
+        </div>
+      </div>
+      <div class="philo-pillars">
+        <div class="pillar">
+          <div class="pillar-title">Connaissance de terrain</div>
+          <p class="pillar-text">Chaque destination que nous proposons a été visitée, testée et vécue par l'un de nos conseillers. Pas de vente à distance, mais une expertise incarnée.</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar-title">Accompagnement continu</div>
+          <p class="pillar-text">Un numéro direct, une personne réelle. Du premier contact jusqu'au retour à la maison, nous restons joignables 24h/24 en cas d'imprévu.</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar-title">Groupes restreints</div>
+          <p class="pillar-text">Nous travaillons uniquement avec des groupes de 3 à 18 personnes, pour préserver la qualité de l'expérience et l'empreinte minimale sur les lieux traversés.</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar-title">Destinations de caractère</div>
+          <p class="pillar-text">Nous privilégions les itinéraires qui sortent des circuits saturés, là où la rencontre est encore possible et où le voyage garde son sens profond.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="voyages">
+  <div class="container">
+    <div class="voyages-header">
+      <p class="section-label">Sélection</p>
+      <h2 class="section-title">Voyages <em>Best-Of</em></h2>
+      <div class="divider"></div>
+      <p style="font-size:1.05rem;color:var(--gris);max-width:560px;margin:0 auto;line-height:1.7;">Une sélection de nos itinéraires les plus appréciés, conçus pour nourrir la curiosité et l'âme — toujours adaptables à votre groupe.</p>
+    </div>
+    <div id="destinations-container"></div>
+  </div>
+</section>
+
+<!-- Modale Voyage -->
+<div class="voyage-modal" id="voyage-modal">
+  <div class="voyage-modal-inner">
+    <div class="voyage-modal-close" onclick="closeVoyageModal()">✕</div>
+    <!-- Galerie -->
+    <div class="vmodal-gallery" id="vmodal-gallery">
+      <div class="vmodal-gallery-main"><img id="vmodal-main-img" src="" alt=""></div>
+      <div class="vmodal-gallery-nav">
+        <button onclick="vmodalPrev()">&#8592;</button>
+        <button onclick="vmodalNext()">&#8594;</button>
+      </div>
+      <div class="vmodal-gallery-counter" id="vmodal-counter"></div>
+    </div>
+    <div class="vmodal-thumbs" id="vmodal-thumbs"></div>
+    <!-- Texte -->
+    <div class="vmodal-content">
+      <div class="vmodal-header">
+        <p class="vmodal-breadcrumb" id="vmodal-breadcrumb"></p>
+        <h2 class="vmodal-title" id="vmodal-title"></h2>
+        <div class="vmodal-meta" id="vmodal-meta"></div>
+      </div>
+      <div class="vmodal-divider"></div>
+      <div class="vmodal-desc" id="vmodal-desc"></div>
+      <div class="vmodal-contacts" id="vmodal-contacts"></div>
+      <div class="vmodal-cta">
+        <a href="#contact" class="btn-primary" onclick="closeVoyageModal()">Demander un devis pour ce voyage</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="sur-mesure">
+  <div class="container">
+    <div class="surm-grid">
+      <div class="surm-text">
+        <p class="section-label">100% Personnalisé</p>
+        <h2 class="section-title" style="color:var(--white);">Votre voyage,<br><em style="color:var(--sable-mid);">votre manière.</em></h2>
+        <div class="divider"></div>
+        <div class="surm-body">
+          <p>Aucun de nos itinéraires n'est figé. Chaque voyage Best-Of peut devenir le point de départ d'une création entièrement personnalisée, pensée autour de vos envies, votre rythme, votre budget.</p>
+          <p>Entreprise cherchant un séminaire mémorable au cœur du désert namibien ? Famille souhaitant mêler trekking amazonien et villages indigènes ? Nous transformons vos idées les plus ambitieuses en voyages réalisables.</p>
+        </div>
+        <a href="#contact" class="btn-primary" style="margin-bottom:44px;display:inline-block;">Démarrer la conversation</a>
+        <div class="surm-features">
+          <div class="surm-feature"><div class="surm-feature-icon">✦</div><div class="surm-feature-text"><strong>Groupes privés</strong><span>3 à 18 participants, familles, amis, équipes</span></div></div>
+          <div class="surm-feature"><div class="surm-feature-icon">◎</div><div class="surm-feature-text"><strong>Séminaires & Events</strong><span>Logistique, team building, incentives</span></div></div>
+          <div class="surm-feature"><div class="surm-feature-icon">◈</div><div class="surm-feature-text"><strong>Budget transparent</strong><span>Devis détaillé, aucune surprise cachée</span></div></div>
+          <div class="surm-feature"><div class="surm-feature-icon">⟁</div><div class="surm-feature-text"><strong>Logistique complète</strong><span>Vols, hébergements, guides, transferts</span></div></div>
+        </div>
+      </div>
+      <div class="surm-visual">
+        <div class="surm-img-wrap"><img src="https://images.unsplash.com/photo-1523805009345-7448845a9e53?w=900&q=80" alt="Sur mesure"></div>
+        <div class="surm-badge"><strong>100%</strong><span>Sur mesure<br>pour vous</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="equipe">
+  <div class="container">
+    <div class="equipe-header">
+      <p class="section-label">Les gens derrière les voyages</p>
+      <h2 class="section-title">Notre <em>Équipe</em></h2>
+      <div class="divider"></div>
+    </div>
+    <div id="equipe-container"><div class="loading"><div class="spinner"></div><br>Chargement de l'équipe…</div></div>
+  </div>
+</section>
+
+<section id="blog">
+  <div class="container">
+    <div class="blog-header">
+      <div>
+        <p class="section-label">Récits &amp; Inspirations</p>
+        <h2 class="section-title">Carnet de <em>Voyages</em></h2>
+      </div>
+    </div>
+    <div id="blog-container"><div class="loading"><div class="spinner"></div><br>Chargement des articles…</div></div>
+  </div>
+</section>
+
+<div class="blog-modal" id="blog-modal">
+  <div class="blog-modal-inner">
+    <span class="blog-modal-close" onclick="closeBlogModal()">✕</span>
+    <p class="blog-modal-date" id="modal-date"></p>
+    <h2 class="blog-modal-title" id="modal-title"></h2>
+    <div class="blog-modal-body" id="modal-body"></div>
+    <div class="blog-modal-images" id="modal-images"></div>
+  </div>
+</div>
+
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-text">
+        <p class="section-label">Parlons de votre projet</p>
+        <h2 class="section-title">Contactez-<em>nous</em></h2>
+        <div class="divider"></div>
+        <p class="contact-body">Chaque voyage commence par une conversation. Partagez-nous vos envies, vos contraintes, votre groupe — nous vous répondons dans les 48 heures avec des premières idées.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-item-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div><p class="contact-item-label">Téléphone</p><p class="contact-item-value">02 40 08 09 39</p></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div><p class="contact-item-label">Email</p><p class="contact-item-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7910171f16391a180b181a0d1c0b1c0a5418141c0b10080c1c0a571a1614">[email&#160;protected]</a></p></div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><p class="contact-item-label">Bureau</p><p class="contact-item-value">Rue Gaëtan Rondeau, Nantes, France</p></div>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-field"><label>Prénom</label><input type="text" name="prenom" placeholder="Votre prénom"></div>
+          <div class="form-field"><label>Nom</label><input type="text" name="nom" placeholder="Votre nom"></div>
+        </div>
+        <div class="form-field"><label>Email</label><input type="email" name="email_contact" placeholder="votre@email.fr"></div>
+        <div class="form-row">
+          <div class="form-field"><label>Type de voyage</label><select name="type_voyage"><option value="">Choisir…</option><option>Famille / Amis</option><option>Séminaire / Entreprise</option><option>Groupe privé</option><option>Autre</option></select></div>
+          <div class="form-field"><label>Nombre de personnes</label><input type="number" name="nb_personnes" placeholder="ex : 6" min="1" max="50"></div>
+        </div>
+        <div class="form-field"><label>Votre projet</label><textarea name="message" placeholder="Destination(s), dates envisagées, envies particulières…"></textarea></div>
+        <button type="submit" class="btn-primary form-submit">Envoyer le message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div style="margin-bottom:16px;">
+          <span class="footer-logo-text"><span class="logo-dot">C</span>·aractères</span>
+          <span class="footer-logo-sub">d'Amériques &amp; Afrique</span>
+        </div>
+        <p class="footer-tagline">Voyages sur mesure pour groupes d'exception. Amériques &amp; Afrique, depuis Nantes.</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Navigation</p>
+        <ul class="footer-links">
+          <li><a href="#philosophie">Notre Approche</a></li>
+          <li><a href="#voyages">Voyages Best-Of</a></li>
+          <li><a href="#sur-mesure">Sur Mesure</a></li>
+          <li><a href="#equipe">L'Équipe</a></li>
+          <li><a href="#blog">Carnet de Voyages</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Destinations</p>
+        <ul class="footer-links">
+          <li><a href="#voyages">Amérique du Nord</a></li>
+          <li><a href="#voyages">Amérique Latine</a></li>
+          <li><a href="#voyages">Afrique & Moyen Orient</a></li>
+        </ul>
+        <p class="footer-col-title" style="margin-top:28px;">Nous Suivre</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/caracteresdameriques/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Caractères – Amériques & Afrique. Tous droits réservés.</span>
+      <span>Agence de voyages sur mesure</span>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+/* ═══════════════════════════════════════════════════════════
+   CONFIG
+═══════════════════════════════════════════════════════════ */
+const AT = {
+  key:    'patjKTgYVvjropd2p.c7236dbf141ea6ccff3a57e64cc6fe319d8ec9e22e6abd4dbdf336758b667884',
+  base:   'appJ0BjMryUbYy2mG',
+  tables: { voyages:'Voyages', equipe:'Équipe', blog:'Blog', regions:'regions', pays:'pays' }
+};
+const USE_MOCK = false;
+
+/* ═══════════════════════════════════════════════════════════
+   DONNÉES MOCK
+═══════════════════════════════════════════════════════════ */
+const MOCK_VOYAGES = {
+  "Amérique du Nord": [
+    { id:'an1', pays:'États-Unis', region:'Grand Ouest', titre:'Immensités du Grand Ouest', duree:'16 jours', desc:'Des canyons vertigineux du Bryce aux dunes de sable de Death Valley, en passant par la majesté du Grand Canyon. Ce circuit vous emmène loin des sentiers battus, chez des familles Navajo, dans des ranches au cœur de l\'Arizona profond.', photos:['https://picsum.photos/seed/gw1/900/600','https://picsum.photos/seed/gw2/900/600','https://picsum.photos/seed/gw3/900/600','https://picsum.photos/seed/gw4/900/600','https://picsum.photos/seed/gw5/900/600'], contacts:[] },
+    { id:'an2', pays:'Canada', region:'Colombie-Britannique', titre:'Rocheuses Canadiennes & Yukon', duree:'14 jours', desc:'Banff, Jasper, les champs de glace et le Yukon sauvage où les ours grizzlis surplombent les rivières à saumons. Une nature d\'une beauté primitive, accessible en petits groupes.', photos:['https://picsum.photos/seed/rb1/900/600','https://picsum.photos/seed/rb2/900/600','https://picsum.photos/seed/rb3/900/600','https://picsum.photos/seed/rb4/900/600'], contacts:[] },
+    { id:'an3', pays:'États-Unis', region:'Deep South', titre:'Deep South — Louisiane & Mississippi', duree:'11 jours', desc:'La Nouvelle-Orléans jazz et créole, les bayous habités d\'alligators, les plantations du Mississippi. Un voyage dans les entrailles de l\'Amérique profonde.', photos:['https://picsum.photos/seed/ds1/900/600','https://picsum.photos/seed/ds2/900/600','https://picsum.photos/seed/ds3/900/600'], contacts:[] },
+    { id:'an4', pays:'Mexique', region:'Yucatan', titre:'Yucatan & Chiapas — Mayas & Jungles', duree:'13 jours', desc:'Chichén Itzá au lever du soleil. Palenque dans la brume. Cenotes secrets. Les marchés de San Cristóbal de las Casas où le temps colonial se mêle aux tenues indigènes.', photos:['https://picsum.photos/seed/yx1/900/600','https://picsum.photos/seed/yx2/900/600','https://picsum.photos/seed/yx3/900/600','https://picsum.photos/seed/yx4/900/600'], contacts:[] },
+    { id:'an5', pays:'Cuba', region:'Île entière', titre:'Cuba Profonde', duree:'12 jours', desc:'Loin de La Havane touristique — Trinidad coloniale, Viñales et ses mogotes, Baracoa isolée. Rencontres avec des artistes, musiciens et paysans dans un pays en mutation.', photos:['https://picsum.photos/seed/cu1/900/600','https://picsum.photos/seed/cu2/900/600','https://picsum.photos/seed/cu3/900/600'], contacts:[] }
+  ],
+  "Amérique Latine": [
+    { id:'al1', pays:'Argentine / Chili', region:'Patagonie', titre:'Patagonie — Torres del Paine & Perito Moreno', duree:'15 jours', desc:'Torres del Paine, ses tours de granit rose dans le vent, le Perito Moreno et ses fracas de glace. La Patagonie n\'est pas un voyage, c\'est une immersion dans la démesure.', photos:['https://picsum.photos/seed/pat1/900/600','https://picsum.photos/seed/pat2/900/600','https://picsum.photos/seed/pat3/900/600','https://picsum.photos/seed/pat4/900/600','https://picsum.photos/seed/pat5/900/600'], contacts:[] },
+    { id:'al2', pays:'Pérou', region:'Amazonie & Andes', titre:'Machu Picchu & Amazonie péruvienne', duree:'15 jours', desc:'La Cité Inca dans les brumes du matin, puis la descente vers Manu, l\'une des zones de biodiversité les plus denses de la planète. Un voyage vertical de 4000 mètres d\'altitude à la forêt tropicale.', photos:['https://picsum.photos/seed/mp1/900/600','https://picsum.photos/seed/mp2/900/600','https://picsum.photos/seed/mp3/900/600','https://picsum.photos/seed/mp4/900/600'], contacts:[] },
+    { id:'al3', pays:'Colombie', region:'Caraïbes & Andes', titre:'Colombie — Cartagena, Coffee & Jungle', duree:'13 jours', desc:'Cartagena et son centre colonial, la Zona Cafetera avec ses fincas familiales, puis Leticia aux portes de l\'Amazonie. La Colombie se réinvente avec une joie communicative.', photos:['https://picsum.photos/seed/co1/900/600','https://picsum.photos/seed/co2/900/600','https://picsum.photos/seed/co3/900/600'], contacts:[] }
+  ],
+  "Afrique & Moyen Orient": [
+    { id:'af1', pays:'Kenya / Tanzanie', region:'Grands Parcs', titre:'Safari Kenya-Tanzanie — Grande Migration', duree:'14 jours', desc:'Le Masai Mara et le Serengeti à l\'heure de la grande migration des gnous. Rencontres avec les communautés masaïs. Ngorongoro et son cratère-arène naturel.', photos:['https://picsum.photos/seed/ke1/900/600','https://picsum.photos/seed/ke2/900/600','https://picsum.photos/seed/ke3/900/600','https://picsum.photos/seed/ke4/900/600','https://picsum.photos/seed/ke5/900/600'], contacts:[] },
+    { id:'af2', pays:'Namibie', region:'Namib & Damaraland', titre:'Namibie — Désert, Étosha & Damaraland', duree:'13 jours', desc:'Le Sossusvlei et ses dunes au lever du soleil. Le Damaraland et ses rhinocéros noirs. Étosha pour les éléphants et les lions. La Namibie est une destination de photographes.', photos:['https://picsum.photos/seed/na5/900/600','https://picsum.photos/seed/na6/900/600','https://picsum.photos/seed/na7/900/600','https://picsum.photos/seed/na8/900/600'], contacts:[] },
+    { id:'af3', pays:'Jordanie', region:'Wadi Rum & Petra', titre:'Jordanie — Petra, Wadi Rum & Mer Morte', duree:'10 jours', desc:'Petra le Trésor à l\'aube sans personne. Le Wadi Rum en dromadaire sous une voûte étoilée hors du commun. La Mer Morte et ses cristaux de sel.', photos:['https://picsum.photos/seed/jo1/900/600','https://picsum.photos/seed/jo2/900/600','https://picsum.photos/seed/jo3/900/600'], contacts:[] }
+  ]
+};
+const MOCK_EQUIPE = [
+  { prenom:'Sophie', nom:'Marchand', metier:'Directrice & Fondatrice', description:'Ancienne globe-trotteuse, Sophie a fondé Caractères après avoir vécu au Pérou, au Kenya et au Mexique. Elle connaît les routes andines comme ses poches.', telephone:'02 40 08 09 39', email:'info@caracteres-ameriques.com', photo:'https://picsum.photos/seed/sp1/400/500' },
+  { prenom:'Julien', nom:'Rivière', metier:'Expert Afrique', description:'Naturaliste de formation, Julien a passé 7 ans en Afrique subsaharienne. Il conçoit chacun de nos safaris avec une exigence de guide animalier.', telephone:'02 40 08 09 39', email:'info@caracteres-ameriques.com', photo:'https://picsum.photos/seed/jl1/400/500' },
+  { prenom:'Camille', nom:'Torres', metier:'Spécialiste Amérique Latine', description:'Fille d\'un père colombien et d\'une mère bretonne, Camille parle espagnol, portugais et quelques mots de quechua. Elle vit la région de l\'intérieur.', telephone:'02 40 08 09 39', email:'info@caracteres-ameriques.com', photo:'https://picsum.photos/seed/cm1/400/500' },
+  { prenom:'Marc', nom:'Lefèbvre', metier:'Logistique & Groupes', description:'Marc gère la mécanique complexe des voyages en groupe. Discret mais indispensable, il est le garant que rien ne déraille.', telephone:'02 40 08 09 39', email:'info@caracteres-ameriques.com', photo:'https://picsum.photos/seed/mc1/400/500' }
+];
+const MOCK_BLOG = [
+  { titre:'Carnet de Patagonie — Le vent comme professeur', date:'2025-02-14', texte:'<p>Il y a des endroits qui vous réduisent à votre juste proportion. La Patagonie en fait partie.</p><p>Nous étions six, partis de Punta Arenas par un matin de novembre. Le vent était déjà là, horizontal, constant. Il a fallu trois jours pour apprendre à ne plus lui résister.</p>', images:['https://picsum.photos/seed/blog1a/900/600','https://picsum.photos/seed/blog1b/900/600'] },
+  { titre:'Éthiopie, la vallée de l\'Omo — rencontres à la lisière du temps', date:'2025-01-03', texte:'<p>La vallée de l\'Omo est l\'un de ces voyages qui vous laisse sans mots pendant plusieurs jours après le retour.</p><p>Les peuples mursi, hamar et daasanach vivent dans des modes de vie où le corps est tableau, où le temps est circulaire.</p>', images:['https://picsum.photos/seed/blog2a/900/600','https://picsum.photos/seed/blog2b/900/600'] },
+  { titre:'Galápagos — Darwin avait raison', date:'2024-11-18', texte:'<p>On ne visite pas les Galápagos. On est reçu par elles. Les fous à pieds bleus vous regardent passer à 40 centimètres de distance.</p><p>Nous avons navigué 8 jours sur un voilier à 12 passagers, avec accès aux îles du nord, peu visitées.</p>', images:['https://picsum.photos/seed/blog3a/900/600','https://picsum.photos/seed/blog3b/900/600'] }
+];
+
+/* ═══════════════════════════════════════════════════════════
+   AIRTABLE FETCH
+═══════════════════════════════════════════════════════════ */
+async function fetchTable(table) {
+  let records = [], offset = null;
+  do {
+    const url = `https://api.airtable.com/v0/${AT.base}/${encodeURIComponent(table)}${offset ? '?offset=' + offset : ''}`;
+    const res = await fetch(url, { headers: { Authorization: `Bearer ${AT.key}` } });
+    if (!res.ok) throw new Error(`[${table}] ${res.status}: ${await res.text()}`);
+    const data = await res.json();
+    records = records.concat(data.records);
+    offset = data.offset || null;
+  } while (offset);
+  console.log(`[Airtable] ${table} → ${records.length} enregistrements`, records[0]?.fields ? Object.keys(records[0].fields) : []);
+  return records;
+}
+
+/* Résolution des linked records : retourne le nom à partir d'un map {id → name} */
+function resolveLinked(fieldVal, lookupMap) {
+  if (!fieldVal) return '';
+  // linked record = tableau d'IDs
+  if (Array.isArray(fieldVal)) {
+    return fieldVal.map(id => lookupMap[id] || id).join(', ');
+  }
+  // chaîne simple déjà résolue
+  return lookupMap[fieldVal] || String(fieldVal);
+}
+
+function pick(obj, ...keys) {
+  for (const k of keys) { if (obj[k] !== undefined && obj[k] !== null && obj[k] !== '') return obj[k]; }
+  return '';
+}
+function pickArr(obj, ...keys) {
+  for (const k of keys) { if (Array.isArray(obj[k]) && obj[k].length > 0) return obj[k]; }
+  return [];
+}
+
+/* ═══════════════════════════════════════════════════════════
+   INIT
+═══════════════════════════════════════════════════════════ */
+// Stockage équipe par ID Airtable (pour les liens dans les voyages)
+let equipeById = {};
+
+async function init() {
+  document.getElementById('hero').classList.add('loaded');
+
+  if (USE_MOCK) {
+    renderVoyages(MOCK_VOYAGES);
+    renderEquipe(MOCK_EQUIPE);
+    blogData = MOCK_BLOG;
+    renderBlog(MOCK_BLOG);
+    return;
+  }
+
+  // ── Lookup tables en parallèle ───────────────────────
+  let regionsMap = {}, paysMap = {};
+  try {
+    const [regRecs, paysRecs] = await Promise.all([
+      fetchTable(AT.tables.regions),
+      fetchTable(AT.tables.pays)
+    ]);
+    regRecs.forEach(r  => { regionsMap[r.id] = pick(r.fields, 'nom', 'Nom', 'name', 'Name'); });
+    paysRecs.forEach(r => { paysMap[r.id]    = pick(r.fields, 'nom', 'Nom', 'name', 'Name'); });
+    console.log('[Lookup] régions:', regionsMap, 'pays:', paysMap);
+  } catch(e) { console.warn('[Lookup tables]', e); }
+
+  // ── ÉQUIPE ───────────────────────────────────────────
+  try {
+    const recs = await fetchTable(AT.tables.equipe);
+    const equipe = recs.map(r => {
+      const f = r.fields;
+      const rawPhoto = pickArr(f, 'photo', 'Photo', 'photos', 'Photos', 'image', 'Image', 'avatar', 'Avatar');
+      const photo = rawPhoto.length > 0
+        ? (typeof rawPhoto[0] === 'object' ? (rawPhoto[0].url || '') : rawPhoto[0])
+        : '';
+      const obj = {
+        _atId:       r.id,
+        prenom:      pick(f, 'prenom', 'prénom', 'Prénom', 'Prenom', 'firstname', 'First Name'),
+        nom:         pick(f, 'nom', 'Nom', 'lastname', 'Last Name', 'name', 'Name'),
+        metier:      pick(f, 'metier', 'métier', 'Métier', 'Metier', 'poste', 'Poste', 'role', 'Role', 'fonction', 'Fonction'),
+        description: pick(f, 'description', 'Description', 'bio', 'Bio'),
+        telephone:   pick(f, 'telephone', 'téléphone', 'Téléphone', 'Telephone', 'tel', 'Tel', 'phone', 'Phone'),
+        email:       pick(f, 'email', 'Email', 'mail', 'Mail'),
+        photo,
+      };
+      equipeById[r.id] = obj;
+      return obj;
+    });
+    renderEquipe(equipe);
+  } catch(e) { console.error('[Équipe]', e); renderEquipe(MOCK_EQUIPE); }
+
+  // ── VOYAGES ──────────────────────────────────────────
+  try {
+    const recs = await fetchTable(AT.tables.voyages);
+    const byRegion = {};
+
+    recs.forEach(r => {
+      const f = r.fields;
+
+      // Résolution région (linked ou texte)
+      const regionRaw = pick(f, 'region', 'Region', 'Région', 'région', 'destination', 'Destination', 'zone', 'Zone');
+      const regionName = resolveLinked(regionRaw, regionsMap) || 'Autres';
+
+      // Résolution pays (linked ou texte)
+      const paysRaw = pick(f, 'pays', 'Pays', 'country', 'Country');
+      const paysName = resolveLinked(paysRaw, paysMap);
+
+      // Photos
+      const rawPhotos = pickArr(f, 'photos', 'Photos', 'photo', 'Photo', 'images', 'Images', 'image', 'Image');
+      const photos = rawPhotos
+        .map(p => typeof p === 'object' ? (p.url || p.thumbnails?.large?.url || '') : p)
+        .filter(Boolean);
+
+      // Contacts liés (tableau d'IDs Airtable)
+      const contactIds = pickArr(f, 'contacts', 'Contacts', 'equipe', 'Equipe', 'Équipe', 'équipe', 'contact', 'Contact');
+
+      if (!byRegion[regionName]) byRegion[regionName] = [];
+      byRegion[regionName].push({
+        id:      r.id,
+        pays:    paysName,
+        region:  regionName,
+        titre:   pick(f, 'nom', 'Nom', 'titre', 'Titre', 'name', 'Name', 'title', 'Title'),
+        duree:   pick(f, 'jours', 'Jours', 'durée', 'Durée', 'duree', 'Duree', 'duration', 'Duration'),
+        desc:    pick(f, 'description', 'Description', 'texte', 'Texte', 'text', 'Text'),
+        photos,
+        contactIds: contactIds.filter(id => typeof id === 'string'),
+        depart:  pick(f, 'depart', 'départ', 'Départ', 'departure'),
+        arrivee: pick(f, 'arrivee', 'arrivée', 'Arrivée', 'arrival'),
+      });
+    });
+
+    renderVoyages(byRegion);
+  } catch(e) { console.error('[Voyages]', e); renderVoyages(MOCK_VOYAGES); }
+
+  // ── BLOG ─────────────────────────────────────────────
+  try {
+    const recs = await fetchTable(AT.tables.blog);
+    blogData = recs.map(r => {
+      const f = r.fields;
+      const rawImgs = pickArr(f, 'images', 'Images', 'photos', 'Photos', 'image', 'Image', 'photo', 'Photo');
+      return {
+        titre:  pick(f, 'titre', 'Titre', 'title', 'Title', 'nom', 'Nom'),
+        date:   pick(f, 'date', 'Date', 'published', 'Published', 'publié', 'Publié'),
+        texte:  pick(f, 'texte', 'Texte', 'text', 'Text', 'contenu', 'Contenu', 'corps', 'Corps', 'body', 'Body'),
+        images: rawImgs.map(i => typeof i === 'object' ? (i.url || '') : i).filter(Boolean),
+      };
+    });
+    renderBlog(blogData);
+  } catch(e) { console.error('[Blog]', e); blogData = MOCK_BLOG; renderBlog(MOCK_BLOG); }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   RENDER VOYAGES
+═══════════════════════════════════════════════════════════ */
+function renderVoyages(data) {
+  const container = document.getElementById('destinations-container');
+  container.innerHTML = '';
+  Object.keys(data).forEach((region, i) => {
+    const voyages = data[region];
+    const el = document.createElement('div');
+    el.className = 'destination open';
+    el.innerHTML = `
+      <button class="destination-toggle" onclick="toggleDestination(this)">
+        <div class="dest-info">
+          <span class="dest-num">${String(i+1).padStart(2,'0')}.</span>
+          <span class="dest-name">${region}</span>
+          <span class="dest-count">${voyages.length} itinéraire${voyages.length > 1 ? 's' : ''}</span>
+        </div>
+        <div class="dest-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#5C4530" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+        </div>
+      </button>
+      <div class="destination-content">
+        <div class="voyages-grid">${voyages.map(v => renderVoyageCard(v)).join('')}</div>
+      </div>`;
+    container.appendChild(el);
+  });
+}
+
+function renderVoyageCard(v) {
+  const cover = v.photos && v.photos.length > 0
+    ? `<div class="voyage-card-cover"><img src="${v.photos[0]}" alt="${v.titre}" loading="lazy"></div>`
+    : '';
+  return `<div class="voyage-card" onclick="openVoyageModal('${v.id}')">
+    ${cover}
+    <div class="voyage-card-body">
+      <p class="voyage-meta">${v.pays}${v.pays && v.region ? ' — ' : ''}${v.region}</p>
+      <h3 class="voyage-title">${v.titre}</h3>
+      <div class="voyage-card-footer">
+        <span class="voyage-duree">${v.duree}</span>
+        <span class="voyage-open-btn">Découvrir <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+      </div>
+    </div>
+  </div>`;
+}
+
+function toggleDestination(btn) {
+  btn.closest('.destination').classList.toggle('open');
+}
+
+/* ═══════════════════════════════════════════════════════════
+   MODALE VOYAGE
+═══════════════════════════════════════════════════════════ */
+let vmodalState = { photos: [], idx: 0 };
+// Index global de tous les voyages par id
+const voyagesIndex = {};
+
+function buildVoyagesIndex(data) {
+  Object.values(data).forEach(arr => arr.forEach(v => { voyagesIndex[v.id] = v; }));
+}
+
+function renderVoyages(data) {
+  buildVoyagesIndex(data);
+  const container = document.getElementById('destinations-container');
+  container.innerHTML = '';
+  Object.keys(data).forEach((region, i) => {
+    const voyages = data[region];
+    const el = document.createElement('div');
+    el.className = 'destination open';
+    el.innerHTML = `
+      <button class="destination-toggle" onclick="toggleDestination(this)">
+        <div class="dest-info">
+          <span class="dest-num">${String(i+1).padStart(2,'0')}.</span>
+          <span class="dest-name">${region}</span>
+          <span class="dest-count">${voyages.length} itinéraire${voyages.length > 1 ? 's' : ''}</span>
+        </div>
+        <div class="dest-arrow">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#5C4530" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+        </div>
+      </button>
+      <div class="destination-content">
+        <div class="voyages-grid">${voyages.map(v => renderVoyageCard(v)).join('')}</div>
+      </div>`;
+    container.appendChild(el);
+  });
+}
+
+function openVoyageModal(id) {
+  const v = voyagesIndex[id];
+  if (!v) return;
+
+  // Galerie
+  vmodalState = { photos: v.photos || [], idx: 0 };
+  const gallery = document.getElementById('vmodal-gallery');
+  gallery.style.display = vmodalState.photos.length > 0 ? 'block' : 'none';
+  if (vmodalState.photos.length > 0) {
+    updateVmodalGallery();
+    // Vignettes
+    const thumbsEl = document.getElementById('vmodal-thumbs');
+    thumbsEl.innerHTML = vmodalState.photos.map((p, i) =>
+      `<div class="thumb${i===0?' active':''}" onclick="vmodalGoTo(${i})"><img src="${p}" alt="" loading="lazy"></div>`
+    ).join('');
+    thumbsEl.style.display = vmodalState.photos.length > 1 ? 'flex' : 'none';
+    // nav
+    document.querySelector('.vmodal-gallery-nav').style.display = vmodalState.photos.length > 1 ? 'flex' : 'none';
+  }
+
+  // Texte
+  document.getElementById('vmodal-breadcrumb').textContent = [v.pays, v.region].filter(Boolean).join(' — ');
+  document.getElementById('vmodal-title').textContent = v.titre;
+  document.getElementById('vmodal-desc').textContent = v.desc || '';
+
+  // Méta
+  const metaEl = document.getElementById('vmodal-meta');
+  const metas = [];
+  if (v.duree) metas.push(`<span class="vmodal-meta-item"><strong>${v.duree}</strong></span>`);
+  if (v.depart) metas.push(`<span class="vmodal-meta-item">Départ <strong>${v.depart}</strong></span>`);
+  if (v.arrivee) metas.push(`<span class="vmodal-meta-item">Arrivée <strong>${v.arrivee}</strong></span>`);
+  metaEl.innerHTML = metas.join('');
+
+  // Contacts équipe liés
+  const contactsEl = document.getElementById('vmodal-contacts');
+  const ids = v.contactIds || [];
+  const found = ids.map(id => equipeById[id]).filter(Boolean);
+  if (found.length > 0) {
+    contactsEl.innerHTML = `<p class="vmodal-contacts-label">Votre contact${found.length > 1 ? 's' : ''}</p>
+      <div class="vmodal-contact-pills">${found.map(m => `
+        <div class="vmodal-pill">
+          <img src="${m.photo || `https://picsum.photos/seed/${m.prenom}/80/80`}" alt="${m.prenom}">
+          <div><div class="vmodal-pill-name">${m.prenom} ${m.nom}</div><div class="vmodal-pill-role">${m.metier}</div></div>
+        </div>`).join('')}
+      </div>`;
+  } else {
+    contactsEl.innerHTML = '';
+  }
+
+  document.getElementById('voyage-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeVoyageModal() {
+  document.getElementById('voyage-modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function updateVmodalGallery() {
+  const { photos, idx } = vmodalState;
+  document.getElementById('vmodal-main-img').src = photos[idx];
+  document.getElementById('vmodal-counter').textContent = `${idx + 1} / ${photos.length}`;
+  document.querySelectorAll('#vmodal-thumbs .thumb').forEach((t, i) => t.classList.toggle('active', i === idx));
+}
+
+function vmodalNext() { vmodalState.idx = (vmodalState.idx + 1) % vmodalState.photos.length; updateVmodalGallery(); }
+function vmodalPrev() { vmodalState.idx = (vmodalState.idx - 1 + vmodalState.photos.length) % vmodalState.photos.length; updateVmodalGallery(); }
+function vmodalGoTo(i) { vmodalState.idx = i; updateVmodalGallery(); }
+
+/* Click outside modal closes it */
+document.getElementById('voyage-modal').addEventListener('click', function(e) {
+  if (e.target === this) closeVoyageModal();
+});
+
+/* ═══════════════════════════════════════════════════════════
+   RENDER ÉQUIPE
+═══════════════════════════════════════════════════════════ */
+function renderEquipe(equipe) {
+  document.getElementById('equipe-container').innerHTML = `<div class="equipe-grid">${equipe.map(m => `
+    <div class="membre-card">
+      <div class="membre-photo"><img src="${m.photo || `https://picsum.photos/seed/${m.prenom}/400/500`}" alt="${m.prenom} ${m.nom}" loading="lazy"></div>
+      <div class="membre-info">
+        <h3 class="membre-name">${m.prenom} ${m.nom}</h3>
+        <p class="membre-role">${m.metier}</p>
+        <p class="membre-desc">${m.description}</p>
+        <div class="membre-contacts">
+          ${m.telephone ? `<div class="membre-contact-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>${m.telephone}</div>` : ''}
+          ${m.email ? `<div class="membre-contact-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>${m.email}</div>` : ''}
+        </div>
+      </div>
+    </div>`).join('')}</div>`;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   RENDER BLOG
+═══════════════════════════════════════════════════════════ */
+let blogData = [];
+function renderBlog(articles) {
+  document.getElementById('blog-container').innerHTML = `<div class="blog-grid">${articles.map((a, i) => {
+    const dateStr = a.date ? new Date(a.date).toLocaleDateString('fr-FR', { year:'numeric', month:'long', day:'numeric' }) : '';
+    const img = a.images && a.images.length > 0 ? a.images[0] : `https://picsum.photos/seed/blog${i}/900/600`;
+    const raw = (a.texte || '').replace(/<[^>]+>/g, '');
+    const excerpt = raw.slice(0, 160) + (raw.length > 160 ? '…' : '');
+    return `<article class="blog-card" onclick="openBlogModal(${i})">
+      <div class="blog-img"><img src="${img}" alt="${a.titre}" loading="lazy"></div>
+      <p class="blog-date">${dateStr}</p>
+      <h3 class="blog-title">${a.titre}</h3>
+      <p class="blog-excerpt">${excerpt}</p>
+      <span class="blog-read-more">Lire la suite <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+    </article>`;
+  }).join('')}</div>`;
+}
+
+function openBlogModal(idx) {
+  const a = blogData[idx];
+  const dateStr = a.date ? new Date(a.date).toLocaleDateString('fr-FR', { year:'numeric', month:'long', day:'numeric' }) : '';
+  document.getElementById('modal-date').textContent = dateStr;
+  document.getElementById('modal-title').textContent = a.titre;
+  document.getElementById('modal-body').innerHTML = a.texte || '';
+  document.getElementById('modal-images').innerHTML = (a.images || []).map(i => `<img src="${i}" alt="" loading="lazy">`).join('');
+  document.getElementById('blog-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeBlogModal() { document.getElementById('blog-modal').classList.remove('open'); document.body.style.overflow = ''; }
+document.getElementById('blog-modal').addEventListener('click', function(e) { if (e.target === this) closeBlogModal(); });
+
+/* ═══════════════════════════════════════════════════════════
+   UI
+═══════════════════════════════════════════════════════════ */
+window.addEventListener('scroll', () => document.getElementById('header').classList.toggle('scrolled', window.scrollY > 60));
+function openMenu()  { document.getElementById('mobileMenu').classList.add('open');    document.getElementById('hamburger').classList.add('hidden');    document.body.style.overflow = 'hidden'; }
+function closeMenu() { document.getElementById('mobileMenu').classList.remove('open'); document.getElementById('hamburger').classList.remove('hidden'); document.body.style.overflow = ''; }
+/* ═══════════════════════════════════════════════════════════
+   EMAILJS
+═══════════════════════════════════════════════════════════ */
+emailjs.init('nEArb885oEmF77JCT');
+
+const EMAILJS_SERVICE  = 'service_qf1jv35';
+const EMAILJS_TEMPLATE = 'cfbs2ak';
+
+function handleSubmit(e) {
+  e.preventDefault();
+  const form = e.target;
+  const btn  = form.querySelector('.form-submit');
+
+  const params = {
+    prenom:        form.querySelector('input[placeholder="Votre prénom"]').value.trim(),
+    nom:           form.querySelector('input[placeholder="Votre nom"]').value.trim(),
+    email_contact: form.querySelector('input[type="email"]').value.trim(),
+    type_voyage:   form.querySelector('select').value,
+    nb_personnes:  form.querySelector('input[type="number"]').value,
+    message:       form.querySelector('textarea').value.trim(),
+  };
+
+  // Validation minimale
+  if (!params.email_contact || !params.message) {
+    alert('Merci de renseigner au moins votre email et votre projet.');
+    return;
+  }
+
+  btn.textContent = 'Envoi en cours…';
+  btn.disabled = true;
+
+  emailjs.send(EMAILJS_SERVICE, EMAILJS_TEMPLATE, params)
+    .then(() => {
+      btn.textContent = 'Message envoyé ✓';
+      btn.style.background = '#4a7c59';
+      form.reset();
+      setTimeout(() => {
+        btn.textContent = 'Envoyer le message';
+        btn.style.background = '';
+        btn.disabled = false;
+      }, 4000);
+    })
+    .catch(err => {
+      console.error('[EmailJS]', err);
+      btn.textContent = 'Erreur — réessayer';
+      btn.style.background = '#a83225';
+      btn.disabled = false;
+      setTimeout(() => {
+        btn.textContent = 'Envoyer le message';
+        btn.style.background = '';
+      }, 4000);
+    });
+}
+
+document.addEventListener('keydown', e => {
+  if (document.getElementById('voyage-modal').classList.contains('open')) {
+    if (e.key === 'ArrowRight') vmodalNext();
+    if (e.key === 'ArrowLeft')  vmodalPrev();
+    if (
