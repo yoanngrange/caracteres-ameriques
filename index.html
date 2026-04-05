@@ -684,8 +684,8 @@ async function init() {
       fetchTable(AT.tables.regions),
       fetchTable(AT.tables.pays)
     ]);
-    regRecs.forEach(r  => { regionsMap[r.id] = pick(r.fields, 'nom', 'Nom', 'name', 'Name'); });
-    paysRecs.forEach(r => { paysMap[r.id]    = pick(r.fields, 'nom', 'Nom', 'name', 'Name'); });
+    regRecs.forEach(r  => { regionsMap[r.id] = pick(r.fields, 'nom'); });
+    paysRecs.forEach(r => { paysMap[r.id]    = pick(r.fields, 'nom'); });
     console.log('[Lookup] régions:', regionsMap, 'pays:', paysMap);
   } catch(e) { console.warn('[Lookup tables]', e); }
 
@@ -1061,4 +1061,12 @@ document.addEventListener('keydown', e => {
   if (document.getElementById('voyage-modal').classList.contains('open')) {
     if (e.key === 'ArrowRight') vmodalNext();
     if (e.key === 'ArrowLeft')  vmodalPrev();
-    if (
+    if (e.key === 'Escape') closeVoyageModal();
+  }
+  if (document.getElementById('blog-modal').classList.contains('open') && e.key === 'Escape') closeBlogModal();
+});
+
+document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>
