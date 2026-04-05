@@ -520,7 +520,7 @@
           </div>
         </div>
       </div>
-      <form class="contact-form" onsubmit="handleSubmit(event)">
+      <form class="contact-form" action="javascript:void(0)" onsubmit="handleSubmit(event)">
         <div class="form-row">
           <div class="form-field"><label>Prénom</label><input type="text" name="prenom" placeholder="Votre prénom"></div>
           <div class="form-field"><label>Nom</label><input type="text" name="nom" placeholder="Votre nom"></div>
@@ -585,7 +585,7 @@
 const AT = {
   key:    'patjKTgYVvjropd2p.c7236dbf141ea6ccff3a57e64cc6fe319d8ec9e22e6abd4dbdf336758b667884',
   base:   'appJ0BjMryUbYy2mG',
-  tables: { voyages:'voyages', equipe:'equipe', blog:'blog', regions:'regions', pays:'pays' }
+  tables: { voyages:'Voyages', equipe:'Équipe', blog:'Blog', regions:'regions', pays:'pays' }
 };
 const USE_MOCK = false;
 
@@ -995,28 +995,39 @@ function closeMenu() { document.getElementById('mobileMenu').classList.remove('o
 /* ═══════════════════════════════════════════════════════════
    EMAILJS
 ═══════════════════════════════════════════════════════════ */
-emailjs.init('nEArb885oEmF77JCT');
-
 const EMAILJS_SERVICE  = 'service_qf1jv35';
 const EMAILJS_TEMPLATE = 'cfbs2ak';
 
+try {
+  emailjs.init('nEArb885oEmF77JCT');
+  console.log('[EmailJS] initialisé');
+} catch(e) {
+  console.warn('[EmailJS] SDK non disponible — vérifiez que le fichier est servi via HTTP(S), pas file://', e);
+}
+
 function handleSubmit(e) {
   e.preventDefault();
+  e.stopPropagation();
+
   const form = e.target;
   const btn  = form.querySelector('.form-submit');
 
   const params = {
-    prenom:        form.querySelector('input[placeholder="Votre prénom"]').value.trim(),
-    nom:           form.querySelector('input[placeholder="Votre nom"]').value.trim(),
-    email_contact: form.querySelector('input[type="email"]').value.trim(),
-    type_voyage:   form.querySelector('select').value,
-    nb_personnes:  form.querySelector('input[type="number"]').value,
-    message:       form.querySelector('textarea').value.trim(),
+    prenom:        form.querySelector('[name="prenom"]').value.trim(),
+    nom:           form.querySelector('[name="nom"]').value.trim(),
+    email_contact: form.querySelector('[name="email_contact"]').value.trim(),
+    type_voyage:   form.querySelector('[name="type_voyage"]').value,
+    nb_personnes:  form.querySelector('[name="nb_personnes"]').value,
+    message:       form.querySelector('[name="message"]').value.trim(),
   };
 
-  // Validation minimale
   if (!params.email_contact || !params.message) {
     alert('Merci de renseigner au moins votre email et votre projet.');
+    return;
+  }
+
+  if (typeof emailjs === 'undefined') {
+    alert('Le formulaire ne peut pas être utilisé en ouvrant le fichier directement depuis votre bureau (protocole file://). Hébergez le fichier sur un serveur pour l\'activer.');
     return;
   }
 
@@ -1035,7 +1046,7 @@ function handleSubmit(e) {
       }, 4000);
     })
     .catch(err => {
-      console.error('[EmailJS]', err);
+      console.error('[EmailJS] erreur:', err);
       btn.textContent = 'Erreur — réessayer';
       btn.style.background = '#a83225';
       btn.disabled = false;
