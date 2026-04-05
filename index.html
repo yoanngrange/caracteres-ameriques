@@ -694,18 +694,18 @@ async function init() {
     const recs = await fetchTable(AT.tables.equipe);
     const equipe = recs.map(r => {
       const f = r.fields;
-      const rawPhoto = pickArr(f, 'photo', 'Photo', 'photos', 'Photos', 'image', 'Image', 'avatar', 'Avatar');
+      const rawPhoto = pickArr(f, 'photo');
       const photo = rawPhoto.length > 0
         ? (typeof rawPhoto[0] === 'object' ? (rawPhoto[0].url || '') : rawPhoto[0])
         : '';
       const obj = {
         _atId:       r.id,
-        prenom:      pick(f, 'prenom', 'prénom', 'Prénom', 'Prenom', 'firstname', 'First Name'),
-        nom:         pick(f, 'nom', 'Nom', 'lastname', 'Last Name', 'name', 'Name'),
-        metier:      pick(f, 'metier', 'métier', 'Métier', 'Metier', 'poste', 'Poste', 'role', 'Role', 'fonction', 'Fonction'),
-        description: pick(f, 'description', 'Description', 'bio', 'Bio'),
-        telephone:   pick(f, 'telephone', 'téléphone', 'Téléphone', 'Telephone', 'tel', 'Tel', 'phone', 'Phone'),
-        email:       pick(f, 'email', 'Email', 'mail', 'Mail'),
+        prenom:      pick(f, 'prenom'),
+        nom:         pick(f, 'nom'),
+        metier:      pick(f, 'metier'),
+        description: pick(f, 'description'),
+        telephone:   pick(f, 'telephone'),
+        email:       pick(f, 'email'),
         photo,
       };
       equipeById[r.id] = obj;
@@ -723,34 +723,34 @@ async function init() {
       const f = r.fields;
 
       // Résolution région (linked ou texte)
-      const regionRaw = pick(f, 'region', 'Region', 'Région', 'région', 'destination', 'Destination', 'zone', 'Zone');
+      const regionRaw = pick(f, 'region');
       const regionName = resolveLinked(regionRaw, regionsMap) || 'Autres';
 
       // Résolution pays (linked ou texte)
-      const paysRaw = pick(f, 'pays', 'Pays', 'country', 'Country');
+      const paysRaw = pick(f, 'pays');
       const paysName = resolveLinked(paysRaw, paysMap);
 
       // Photos
-      const rawPhotos = pickArr(f, 'photos', 'Photos', 'photo', 'Photo', 'images', 'Images', 'image', 'Image');
+      const rawPhotos = pickArr(f, 'photos');
       const photos = rawPhotos
         .map(p => typeof p === 'object' ? (p.url || p.thumbnails?.large?.url || '') : p)
         .filter(Boolean);
 
       // Contacts liés (tableau d'IDs Airtable)
-      const contactIds = pickArr(f, 'contacts', 'Contacts', 'equipe', 'Equipe', 'Équipe', 'équipe', 'contact', 'Contact');
+      const contactIds = pickArr(f, 'equipe');
 
       if (!byRegion[regionName]) byRegion[regionName] = [];
       byRegion[regionName].push({
         id:      r.id,
         pays:    paysName,
         region:  regionName,
-        titre:   pick(f, 'nom', 'Nom', 'titre', 'Titre', 'name', 'Name', 'title', 'Title'),
-        duree:   pick(f, 'jours', 'Jours', 'durée', 'Durée', 'duree', 'Duree', 'duration', 'Duration'),
-        desc:    pick(f, 'description', 'Description', 'texte', 'Texte', 'text', 'Text'),
+        titre:   pick(f, 'nom'),
+        duree:   pick(f, 'jours'),
+        desc:    pick(f, 'description'),
         photos,
         contactIds: contactIds.filter(id => typeof id === 'string'),
-        depart:  pick(f, 'depart', 'départ', 'Départ', 'departure'),
-        arrivee: pick(f, 'arrivee', 'arrivée', 'Arrivée', 'arrival'),
+        depart:  pick(f, 'depart'),
+        arrivee: pick(f, 'arrivee'),
       });
     });
 
@@ -762,11 +762,11 @@ async function init() {
     const recs = await fetchTable(AT.tables.blog);
     blogData = recs.map(r => {
       const f = r.fields;
-      const rawImgs = pickArr(f, 'images', 'Images', 'photos', 'Photos', 'image', 'Image', 'photo', 'Photo');
+      const rawImgs = pickArr(f, 'photos');
       return {
-        titre:  pick(f, 'titre', 'Titre', 'title', 'Title', 'nom', 'Nom'),
-        date:   pick(f, 'date', 'Date', 'published', 'Published', 'publié', 'Publié'),
-        texte:  pick(f, 'texte', 'Texte', 'text', 'Text', 'contenu', 'Contenu', 'corps', 'Corps', 'body', 'Body'),
+        titre:  pick(f, 'titre'),
+        date:   pick(f, 'date'),
+        texte:  pick(f, 'texte'),
         images: rawImgs.map(i => typeof i === 'object' ? (i.url || '') : i).filter(Boolean),
       };
     });
