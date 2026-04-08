@@ -743,7 +743,7 @@ function renderVoyageCard(v) {
       <p class="voyage-meta">${v.pays}${v.pays && v.region ? ' — ' : ''}${v.region}</p>
       <h3 class="voyage-title">${v.titre}</h3>
       <div class="voyage-card-footer">
-        <span class="voyage-duree">${v.duree}</span>
+        <span class="voyage-duree">${v.duree} jours</span>
         <span class="voyage-open-btn">Découvrir <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
       </div>
     </div>
@@ -780,7 +780,7 @@ function openVoyageModal(id) {
   document.getElementById('vmodal-desc').textContent = v.desc || '';
 
   const metas = [];
-  if (v.duree)   metas.push(`<span class="vmodal-meta-item"><strong>${v.duree}</strong></span>`);
+  if (v.duree)   metas.push(`<span class="vmodal-meta-item"><strong>${v.duree} jours</strong></span>`);
   if (v.depart)  metas.push(`<span class="vmodal-meta-item">Départ <strong>${v.depart}</strong></span>`);
   if (v.arrivee) metas.push(`<span class="vmodal-meta-item">Arrivée <strong>${v.arrivee}</strong></span>`);
   document.getElementById('vmodal-meta').innerHTML = metas.join('');
