@@ -731,7 +731,7 @@ function renderVoyages(data) {
       <button class="destination-toggle" onclick="toggleDestination(this)">
         <div class="dest-info">
           <span class="dest-num">${String(i+1).padStart(2,'0')}.</span>
-          <span class="dest-name">${region}</span>
+          <span class="dest-name">&#8203;${region}</span>
           <span class="dest-count">${voyages.length} itinéraire${voyages.length > 1 ? 's' : ''}</span>
         </div>
         <div class="dest-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="#5C4530" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></div>
